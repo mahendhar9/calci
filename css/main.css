@@ -20,7 +20,7 @@ html {
       font-size: 8vmin;
       padding: 0 2vmin; }
     html #calculator #preview {
-      background-color: #95a5a6;
+      background-color: #7f8c8d;
       height: 8vmin;
       text-align: right;
       line-height: 8vmin;
@@ -34,16 +34,14 @@ html {
       text-align: center;
       line-height: 12vmin;
       font-size: 3vmin;
-      border: 1px solid #ecf0f1; }
-      html #calculator .key#plus {
+      border: 1px solid #f5f5f5; }
+      html #calculator .key#key-PLUS {
         height: 24vmin;
         line-height: 24vmin; }
       html #calculator .key:hover {
-        background-color: #2ecc71;
-        cursor: pointer; }
-      html #calculator .key:active {
-        background-color: #229955;
-        border: 2px solid #f9f948; }
+        background-color: #2ecc71; }
+      html #calculator .key:active, html #calculator .key.active {
+        background-color: #229955; }
     html #calculator .key-group {
       padding: 0; }
 
