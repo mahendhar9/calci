@@ -17,8 +17,7 @@ Calci = {
     13: '=',
     8: 'DEL',
     43: '+',
-    45: '-',
-    46: '.'
+    45: '-'
   },
 
   lastKeyWasOp: false,
@@ -29,6 +28,8 @@ Calci = {
     $('#result').text("0");
 
   },
+
+
 
   del: function() {
     var preview = $('#preview').text();
@@ -58,38 +59,28 @@ Calci = {
 
       default:
 
-     if (val == '.' && Calci.lastKeyWasDot) {
-        
-      } else {
-
       if(['+','*','-','/'].indexOf(val) != -1 && Calci.lastKeyWasOp) {
         Calci.del();
-      }     
+      } 
         var preview = $('#preview').text();
         $('#preview').html(preview + val);
-      }
+      
       
   }
-
   if(['+','-','*','/'].indexOf(val) == -1) {
     Calci.lastKeyWasOp = false;
   } else {
     Calci.lastKeyWasOp = true;
   }
-
-  if(val == '.') {
-    Calci.lastKeyWasDot = true;
-  }
-  else {
-    Calci.lastKeyWasDot = false;
-  }
 },
+
+  
+
   
   keyPress: function() {
     $(document).keypress(function(event) {
 
       var keycode = event.keyCode || event.which;
-
       Calci.keyClick(Calci.keyCodes[keycode]);
 
     });
@@ -99,39 +90,13 @@ Calci = {
 
 
 $(document).ready(function(){
- $('.key').click(function(){
+  
+  $('.key').click(function(){
+    console.log($(this).text());
     Calci.keyClick($(this).text());
   });
 
   Calci.keyPress();
 
-  $('#green').bind('click', function() {
-    $('html').removeClass("red-theme");
-    $('html').removeClass("orange-theme");
-    $('html').removeClass("blue-theme");
-    $('html').addClass("");
-    });
-
-  $('#blue').bind('click', function() {
-    $('html').removeClass("red-theme");
-    $('html').removeClass("orange-theme");
-    $('html').addClass("blue-theme");
-    });
-
-  $('#red').bind('click', function() {
-    $('html').removeClass("blue-theme");
-    $('html').removeClass("orange-theme");
-    $('html').addClass("red-theme");
-  });
-
-  $('#orange').bind('click', function() {
-    $('html').removeClass("blue-theme");
-    $('html').removeClass("red-theme");
-    $('html').addClass("orange-theme");
-  });
-
 });
-
-
-
 

@@ -5,18 +5,37 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Calci</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link id = "styles" rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/blue.css">
+  <link rel="stylesheet" href="css/red.css">
+  <link rel="stylesheet" href="css/orange.css">
+ 
+
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   <script src="js/jquery.hotkeys.js"></script>
   <script src="js/app.js"></script>
+  
+  
 </head>
 <body>
-  <div id="calculator" class="container-fluid vcenter">
+
+  <div class="row row1">
+    <div class= "col-xs-3 col-xs-offset-2">
+
+      <button id = "green" type="button" class="btn btn-lg btn-default">Default Color</button>
+      <button id = "blue" type="button" class="btn btn-lg btn-primary">Change to Blue</button>
+      <button id = "red" type="button" class="btn btn-lg btn-danger">Change to Red</button>
+      <button id = "orange" type="button" class="btn btn-lg btn-orange">Change to Orange</button>
+
+    </div>
+
+  <div class="col-xs-4">
+ <div id="calculator" class="container-fluid vcenter">
     <div id="result" class="row">0</div>
     <div id="preview" class="row"></div>
     <div class="row key-row">
       <div id="key-AC" class="col-xs-3 key" data-code="AC">AC</div>
-      <div id="key-MULTIPLY" class="col-xs-3 key" data-code="MULTIPLY">X</div>
+      <div id="key-MULTIPLY" class="col-xs-3 key" data-code="MULTIPLY">*</div>
       <div id="key-DIVISION" class="col-xs-3 key" data-code="DIVISION">/</div>
       <div id="key-DEL" class="col-xs-3 key" data-code="DEL">DEL</div>
     </div>
@@ -47,5 +66,7 @@
       <div id="key-EQL" class="col-xs-6 key" data-code="EQL">=</div>
     </div>
   </div>
+</div>
+</div>
 </body>
 </html>

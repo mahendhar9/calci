@@ -4,28 +4,38 @@
   transform: translateY(-50%); }
 
 html {
-  background-color: #ecf0f1; }
+  
+  }
   html body {
-    height: 100vh; }
+    height: 100vh;
+    background-image: url("../img/bg7.jpg");
+    background-repeat: no-repeat; }
   html #calculator {
     width: 48vmin;
     height: 84vmin;
     background-color: #2ecc71;
-    color: #ecf0f1; }
+    color: #ecf0f1;
+    margin-top: 12vmin; }
     html #calculator #result {
       background-color: #2c3e50;
       height: 16vmin;
       text-align: right;
       line-height: 16vmin;
       font-size: 8vmin;
-      padding: 0 2vmin; }
+      padding: 0 2vmin;
+      border: 1px solid #f7f7f7;
+      overflow: hidden; 
+    }
+
     html #calculator #preview {
       background-color: #7f8c8d;
       height: 8vmin;
       text-align: right;
       line-height: 8vmin;
       font-size: 3vmin;
-      padding: 0 2vmin; }
+      border: 1px solid #f7f7f7;
+      padding: 0 2vmin; 
+    }
     html #calculator .key {
       padding: 0;
       height: 12vmin;
@@ -34,15 +44,69 @@ html {
       text-align: center;
       line-height: 12vmin;
       font-size: 3vmin;
-      border: 1px solid #f5f5f5; }
+      border: 1px solid #f5f5f5; 
+    }
       html #calculator .key#key-PLUS {
         height: 24vmin;
-        line-height: 24vmin; }
+        line-height: 24vmin; 
+      }
       html #calculator .key:hover {
-        background-color: #2ecc71; }
+        background-color: #2ecc71; 
+      }
       html #calculator .key:active, html #calculator .key.active {
-        background-color: #229955; }
+        background-color: #229955; 
+      }
     html #calculator .key-group {
-      padding: 0; }
+      padding: 0; 
+    }
 
+      .top-space {
+        position:relative;
+        top: 35%;
+      }
+
+      #green {
+        background-color: #27ae60;
+        width:156px;
+        color: #fff;
+        display: block;
+        margin-bottom: 10px;
+        
+      }
+
+      #blue {
+        margin-bottom: 10px;
+      }
+
+      #red {
+        margin-bottom: 10px;
+      }
+    
+      .row1 {
+        position: relative;
+        top: 40%;
+        height: 30vmin;
+      }
+
+      
+      .btn-orange {
+        width:156px;
+        height: 46px;
+        background-color: #d35400;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        padding-left: 5px;
+
+      }
+
+      .btn-orange:hover {
+        color: #fff;
+        background-color: #e67e22;
+        }
+
+      .btn-orange:active .btn-orange:active{
+        color: #fff;
+        background-color: #d35400;
+      }
 /*# sourceMappingURL=main.css.map */
